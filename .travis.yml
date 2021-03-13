@@ -1,14 +1,11 @@
 language: node_js
 node_js:
-  - "15.11.0"
-
+- 14.16.0
 script:
-  - ng build --prod
+- npm run build:ssr
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  local-dir: ./dist/
+  provider: heroku
+  api_key:
+    secure: j5EgsLjhy4F4I6CUJNta9nPPx4+NnvbYAi2rQ1rh/Ynh2uwbmuydJXMZLSDp2+owFuYAJQ+yxBWcMSfYHIpnI3LynRxDHc7mrmsMRqnayYfwuABpPfyyfYiJk60fK1Pl50SIR/+QTHk1yuPbre0++2mnu8XXAh6oxXbj2u56qW2UMvMBIlHtT4hna3n0Ke+o1n2cVYbTUn/HFOaG4UljOWXy2H8bo0uCs2G2P/RgjMFjEuftJoRky+mRhXdL/IZJ1mM6EldIPsh3w3lXYR0Cv9yftzEeBLH3dj1vg+txkK6fKwGbvHpA2TqmRMC+JPzxc3QfxZxxAQKIYkTGLg23Nc6/OOBgG04DqnZqINEMjgWuNRdBL+OOS9LDf/IJbIx+XD2ZEQGvQC1ktWuotFrrPBusfEH6nKHGy81cES4PllvruUqSeeAzTIAgiZ4/la1qPSZIosbpoDxUM4Y44KxoSXkJ23hfELr6wxEPhVGypDCdCE02TnGOvBE9EkrVPZ5GxoZgXHFzPqNdlALORrzO8oW2ybXEQ0mnV98i3GHsgzQRtWNSX6vfIIvKhReZdAbAKv+7Esq+uoIUTFq9/8pgNsw2ck7/6jgagJDCE/k2gb7I3e8oPSXA7n1CLRw9/tVr7AnmFLCS0jZNhoGahZNQvwa/OZrowgKm841Mw2RIb70=
   on:
     branch: main
