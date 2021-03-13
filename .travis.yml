@@ -1,9 +1,12 @@
 language: node_js
 node_js:
   - 14.16.0
-script:
+before_install:
   - npm install -g typescript
+  - npm install -g @angular/cli
+install:
   - npm install
+script:
   - npm run build:ssr
 deploy:
   provider: heroku
