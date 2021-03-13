@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PS-XT-Coding-Assignment"
+    }
+  },
+  "defaultProject": "PS-XT-Coding-Assignment",
+  "cli": {
+    "analytics": false
+  }
 }
