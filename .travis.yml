@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "15.11.0"
+
+script:
+  - ng build --prod
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: 16b23991154d9d5f2a09050537a72b792bb0be08 # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: main

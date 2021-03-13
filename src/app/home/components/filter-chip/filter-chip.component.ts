@@ -17,7 +17,7 @@ export class FilterChipComponent implements OnInit, ControlValueAccessor {
   @Input() disabled = false;
   @Input() value: any;
   @Input() label: string;
-  @Input() checked: boolean = false;
+  @Input() checked = false;
 
   private selected: boolean;
   uniqueId: string;
@@ -25,7 +25,7 @@ export class FilterChipComponent implements OnInit, ControlValueAccessor {
   constructor() { }
 
   ngOnInit(): void {
-    this.uniqueId = `${this.label}_${this.value}_${new Date().getTime()}`
+    this.uniqueId = `${this.label}_${this.value}_${new Date().getTime()}`;
   }
 
   onChange: any = (selection: any) => { };
@@ -48,7 +48,7 @@ export class FilterChipComponent implements OnInit, ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  setValue(event: Event) {
+  setValue(event: Event): void {
     this.selected = event && event.target && event.target['checked'];
     this.onChange(this.selected);
   }
