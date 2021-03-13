@@ -1,15 +1,22 @@
 .spaceXCard {
   background-color: white;
   padding: 25px;
+  border-radius:8px;
+  margin-top: 20px;
+  
+  
 
   img {
     background-color: #F2F2F2;
-    max-width: 100%;
+  width:100%;
+   
+    margin-top:4px;
   }
 
   .cardHeading {
     font-size: 18px;
     font-weight: bold;
+    margin-left:10px
   }
 
   .heading1 {
@@ -23,6 +30,7 @@
 
   .detail {
     line-height: 2rem;
+    margin-left:10px;
 
     ul {
       list-style: disc;
