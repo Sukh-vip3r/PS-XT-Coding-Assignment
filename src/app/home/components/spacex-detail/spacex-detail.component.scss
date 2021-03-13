@@ -1,0 +1,36 @@
+.spaceXCard {
+  background-color: white;
+  padding: 25px;
+
+  img {
+    background-color: #F2F2F2;
+    max-width: 100%;
+  }
+
+  .cardHeading {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .heading1 {
+    line-height: 3rem;
+    color: #4b5dbb;
+  }
+
+  .heading2 {
+    line-height: 3rem;
+  }
+
+  .detail {
+    line-height: 2rem;
+
+    ul {
+      list-style: disc;
+      margin-left: 30px;
+    }
+
+    .propertyName {
+      font-weight: bold;
+    }
+  }
+}
