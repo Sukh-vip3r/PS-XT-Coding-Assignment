@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
       this._filters = {
         ...this._filters,
         ...payload
-      }
+      };
     }
   }
 
