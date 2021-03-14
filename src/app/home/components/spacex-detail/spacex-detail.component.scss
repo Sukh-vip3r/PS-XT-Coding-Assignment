@@ -24,7 +24,7 @@
 
   .heading1 {
     line-height: 3rem;
-    color: #4b5dbb;
+    color: #3046b8;
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -41,10 +41,19 @@
     ul {
       list-style: disc;
       margin-left: 30px;
+
+      li {
+        color: #4b5dbb;
+      }
+
     }
 
     .propertyName {
       font-weight: bold;
+    }
+
+    .propertyValue {
+      color: #4b5dbb;
     }
   }
 }
@@ -64,7 +73,7 @@
       min-width: 100px;
       min-height: 100px;
     }
-  
+
 
   }
 

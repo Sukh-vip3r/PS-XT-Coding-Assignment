@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   loader = false;
   private _filters: any = {};
 
-  constructor(private hoemService: HomeService, @Inject(PLATFORM_ID) private platformId: Object) { }
+  constructor(private hoemService: HomeService, @Inject(PLATFORM_ID) private platformId: any) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
