@@ -12,7 +12,7 @@
     "serve:ssr": "node dist/PS-XT-Coding-Assignment/server/main.js",
     "build:ssr": "ng build --prod && ng run PS-XT-Coding-Assignment:server:production",
     "prerender": "ng run PS-XT-Coding-Assignment:prerender"
-  },
+  }, 
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "~0.1001.1",
