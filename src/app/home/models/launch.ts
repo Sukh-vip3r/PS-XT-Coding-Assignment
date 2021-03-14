@@ -32,10 +32,9 @@ export class Launch {
     launch_date_source?: string;
     missionFlightName?: string;
 
-
     constructor(payload: any) {
         Object.assign(this, payload);
-        this.missionFlightName=`${payload.mission_name} #${payload.flight_number}`
+        this.missionFlightName = `${payload.mission_name} #${payload.flight_number}`;
     }
 }
 

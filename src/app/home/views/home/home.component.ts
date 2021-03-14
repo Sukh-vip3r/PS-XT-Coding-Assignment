@@ -31,20 +31,20 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  get filters() {
+  get filters(): any {
     return sanitizeObject(this._filters);
   }
 
 
-  handleFiltersChanged(filter) {
+  handleFiltersChanged(filter): void {
     this.filters = filter;
     this.fetchLaunches();
   }
 
-  async fetchLaunches() {
+  async fetchLaunches(): Promise<void> {
     try {
       this.loader = true;
-      let resp = await this.hoemService.getLaunches({ limit: 100, ...this.filters });
+      const resp = await this.hoemService.getLaunches({ limit: 100, ...this.filters });
       if (validateArray(resp)) {
         this.launches = resp;
       } else {

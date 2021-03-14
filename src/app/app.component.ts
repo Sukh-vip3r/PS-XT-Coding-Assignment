@@ -16,10 +16,8 @@ export class AppComponent {
     { value: 2014, name: '2014' },
     { value: 2013, name: '2013' },
     { value: 2012, name: '2012' }
-  ]
+  ];
 
 
-  onChnageHandle(event) {
-    console.log(event);
-  }
+
 }

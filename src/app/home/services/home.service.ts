@@ -8,14 +8,13 @@ import { Launch } from '../models/launch';
 export class HomeService {
 
   private BASE_URL = environment.SPACE_X_BASE_URL;
-  private GET_LAUNCHES = `${this.BASE_URL}launches`
+  private GET_LAUNCHES = `${this.BASE_URL}launches`;
 
-  constructor(private _http: HttpClient) {
-    console.log(this.BASE_URL, 'BASER URL');
+  constructor(private http: HttpClient) {
   }
 
-  getLaunches(params) {
-    return this._http.get<Launch[]>(this.GET_LAUNCHES, { params }).pipe(map(resp => resp.map(launch => new Launch(launch)))).toPromise();
+  getLaunches(params): Promise<Launch[]> {
+    return this.http.get<Launch[]>(this.GET_LAUNCHES, { params }).pipe(map(resp => resp.map(launch => new Launch(launch)))).toPromise();
   }
 
 

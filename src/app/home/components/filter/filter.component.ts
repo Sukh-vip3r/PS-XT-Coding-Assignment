@@ -19,7 +19,7 @@ export class FilterComponent implements OnInit {
 
   }
 
-  onFilterApplied(keyName: string, values) {
+  onFilterApplied(keyName: string, values): void {
     this.filterChanged.emit({ [keyName]: values });
   }
 

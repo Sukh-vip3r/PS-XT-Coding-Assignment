@@ -1,5 +1,3 @@
-
-
 export const YEAR_FILTER = [
     { name: '2006', value: 2006 },
     { name: '2007', value: 2007 },
@@ -16,15 +14,15 @@ export const YEAR_FILTER = [
     { name: '2018', value: 2018 },
     { name: '2019', value: 2019 },
     { name: '2020', value: 2020 }
-]
+];
 
 
 export const SUCCESSFUL_LAUNCH_FILTER = [
     { name: 'True', value: 'true' },
     { name: 'False', value: 'false' }
-]
+];
 
 export const SUCCESSFUL_LANDING_FILTER = [
     { name: 'True', value: 'true' },
     { name: 'False', value: 'false' }
-]
+];

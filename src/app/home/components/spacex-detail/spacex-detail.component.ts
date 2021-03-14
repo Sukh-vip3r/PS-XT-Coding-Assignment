@@ -9,7 +9,6 @@ import { Launch } from '../../models/launch';
 export class SpacexDetailComponent implements OnInit {
 
   @Input() launch: Launch;
-  
   constructor() { }
 
   ngOnInit(): void {

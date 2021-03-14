@@ -11,7 +11,8 @@
     "dev:ssr": "ng run PS-XT-Coding-Assignment:serve-ssr",
     "serve:ssr": "node dist/PS-XT-Coding-Assignment/server/main.js",
     "build:ssr": "ng build --prod && ng run PS-XT-Coding-Assignment:server:production",
-    "prerender": "ng run PS-XT-Coding-Assignment:prerender"
+    "prerender": "ng run PS-XT-Coding-Assignment:prerender",
+    "heroku-postbuild": "ng build --prod && ng run PS-XT-Coding-Assignment:server:production"
   }, 
   "private": true,
   "dependencies": {

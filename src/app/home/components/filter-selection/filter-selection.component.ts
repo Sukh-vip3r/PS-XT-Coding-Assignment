@@ -26,21 +26,21 @@ export class FilterSelectionComponent implements OnInit {
   }
 
 
-  addControl(controlName: string) {
-    this.selection.push(new FormControl(false))
+  addControl(controlName: string): void {
+    this.selection.push(new FormControl(false));
   }
 
 
-  subscribeToFormArray() {
+  subscribeToFormArray(): void {
     this.formSubscription = this.selection.valueChanges.pipe(debounceTime(200), distinctUntilChanged()).subscribe((items) => {
-      let selectedValues = [];
-      for (let index in items) {
+      const selectedValues = [];
+      for (const index in items) {
         if (items[index]) {
-          selectedValues.push(this.filters[index]['value']);
+          selectedValues.push(this.filters[index].value);
         }
       }
       this.selectionChange.emit(selectedValues.toString());
-    })
+    });
   }
 
 
