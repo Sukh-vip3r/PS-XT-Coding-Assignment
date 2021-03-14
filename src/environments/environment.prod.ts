@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  SPACE_X_BASE_URL: 'https://api.spacexdata.com/v3/'
 };

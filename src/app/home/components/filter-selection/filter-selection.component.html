@@ -1,5 +1,6 @@
 <ul class="filterListWrapper">
-    <li *ngFor="let filter of filters" class="col-m-6 col-s-6 col-6">
-        <app-filter-chip [label]="filter?.name" [value]="filter?.value"></app-filter-chip>
+    <li *ngFor="let filter of filters; let i=index" class="col-m-6 col-s-6 col-6">
+        <app-filter-chip ngDefaultControl [formControl]="selection.controls[i]" [label]="filter?.name"
+            [value]="filter?.value"></app-filter-chip>
     </li>
 </ul>

@@ -20,11 +20,11 @@ export const YEAR_FILTER = [
 
 
 export const SUCCESSFUL_LAUNCH_FILTER = [
-    { name: 'True', value: 'True' },
-    { name: 'False', value: 'False' }
+    { name: 'True', value: 'true' },
+    { name: 'False', value: 'false' }
 ]
 
 export const SUCCESSFUL_LANDING_FILTER = [
-    { name: 'True', value: 'True' },
-    { name: 'False', value: 'False' }
+    { name: 'True', value: 'true' },
+    { name: 'False', value: 'false' }
 ]
