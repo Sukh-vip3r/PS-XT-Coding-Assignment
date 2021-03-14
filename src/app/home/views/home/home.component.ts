@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { validateArray } from 'src/app/shared/util/array-validator.util';
 import { sanitizeObject, validateObject } from 'src/app/shared/util/sanitize-object.util';
 import { Launch } from '../../models/launch';
 import { HomeService } from '../../services/home.service';
-
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,10 +15,12 @@ export class HomeComponent implements OnInit {
   loader = false;
   private _filters: any = {};
 
-  constructor(private hoemService: HomeService) { }
+  constructor(private hoemService: HomeService, @Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit(): void {
-    this.fetchLaunches();
+    if (isPlatformBrowser(this.platformId)) {
+      this.fetchLaunches();
+    }
   }
 
 

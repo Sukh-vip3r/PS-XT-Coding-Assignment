@@ -3,6 +3,7 @@ import { ServerModule } from '@angular/platform-server';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
+// import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -10,5 +11,11 @@ import { AppComponent } from './app.component';
     ServerModule,
   ],
   bootstrap: [AppComponent],
+  // providers: [
+  //   {
+  //     provide: APP_BASE_HREF,
+  //     useValue: 'server'
+  //   }
+  // ],
 })
-export class AppServerModule {}
+export class AppServerModule { }
