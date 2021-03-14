@@ -13,7 +13,7 @@
     "build:ssr": "ng build --prod && ng run PS-XT-Coding-Assignment:server:production",
     "prerender": "ng run PS-XT-Coding-Assignment:prerender",
     "heroku-postbuild": "ng build --prod && ng run PS-XT-Coding-Assignment:server:production"
-  }, 
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.1.1",

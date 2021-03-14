@@ -9,8 +9,6 @@ import { SpacexDetailComponent } from './components/spacex-detail/spacex-detail.
 import { HomeService } from './services/home.service';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     FilterChipComponent,
