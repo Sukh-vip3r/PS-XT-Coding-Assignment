@@ -7,6 +7,7 @@
   flex-direction: column;
 
   img {
+    aspect-ratio: attr(width) / attr(height);
     background-color: #F2F2F2;
     max-width: 100%;
     width: 100%;

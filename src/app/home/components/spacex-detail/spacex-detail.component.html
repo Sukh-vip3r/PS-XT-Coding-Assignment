@@ -1,6 +1,8 @@
 <div class="cardWrapper">
     <div class="spaceXCard">
-        <img loading="lazy" [alt]="launch?.missionFlightName" [src]="launch?.links?.mission_patch_small" />
+        <div class="imageWrapper">
+            <img loading="lazy" width="224" height="224" [alt]="launch?.missionFlightName" [src]="launch?.links?.mission_patch_small" />
+        </div>
         <h6 class="cardHeading heading1" [title]="">{{launch?.missionFlightName}}</h6>
         <div class="detail">
             <span class="propertyName">Mission ids:</span>
