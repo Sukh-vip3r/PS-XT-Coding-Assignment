@@ -1,7 +1,7 @@
 <section class="filterWrapper">
     <h1>Filters</h1>
-    <app-filter-section title="Launch Year" [filters]="yearFilter"></app-filter-section>
-    <app-filter-section title="Successful Launch" [filters]="launchFilter"></app-filter-section>
-    <app-filter-section title="Successful Landing" [filters]="landingFilter"></app-filter-section>
-
+    <app-filter-section title="Launch Year" (selectionChange)="onFilterApplied('launch_year',$event)"
+        [filters]="yearFilter"></app-filter-section>
+    <app-filter-section title="Successful Launch" (selectionChange)="onFilterApplied('launch_success',$event)" [filters]="launchFilter"></app-filter-section>
+    <app-filter-section title="Successful Landing" (selectionChange)="onFilterApplied('land_success',$event)" [filters]="landingFilter"></app-filter-section>
 </section>

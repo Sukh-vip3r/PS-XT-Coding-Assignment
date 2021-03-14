@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-section',
@@ -9,10 +9,14 @@ export class FilterSectionComponent implements OnInit {
 
   @Input() title: string;
   @Input() filters: any[];
-  
+  @Output() selectionChange: EventEmitter<string[]> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
+
 
 }

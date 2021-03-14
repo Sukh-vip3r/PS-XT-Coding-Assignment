@@ -6,6 +6,8 @@ import { HomeComponent } from './views/home/home.component';
 import { FilterSelectionComponent } from './components/filter-selection/filter-selection.component';
 import { FilterSectionComponent } from './components/filter-section/filter-section.component';
 import { SpacexDetailComponent } from './components/spacex-detail/spacex-detail.component';
+import { HomeService } from './services/home.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,13 +21,15 @@ import { SpacexDetailComponent } from './components/spacex-detail/spacex-detail.
     SpacexDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     FilterChipComponent,
     FilterComponent,
     HomeComponent,
     FilterSelectionComponent
-  ]
+  ],
+  providers: [HomeService]
 })
 export class HomeModule { }

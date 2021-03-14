@@ -48,8 +48,8 @@ export class FilterChipComponent implements OnInit, ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  setValue(event: Event) {
-    this.selected = event && event.target && event.target['checked'];
+  setValue(event: any) {
+    this.selected = event && event.target && event.target.checked;
     this.onChange(this.selected);
   }
 }

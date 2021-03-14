@@ -1,4 +1,5 @@
 <div class="filterSectionWrapper">
     <h4>{{title}}</h4>
-    <app-filter-selection [filters]="filters"></app-filter-selection>
+    <app-filter-selection [filters]="filters" (selectionChange)="selectionChange.emit($event)">
+    </app-filter-selection>
 </div>
